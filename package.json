@@ -1,0 +1,100 @@
+{
+	"name": "flutter-easy-project",
+	"displayName": "Flutter Design Patterns",
+	"description": "Flutter extension to make projects creation easier",
+	"version": "1.0.0",
+	"publisher": "rennanpossas",
+	"engines": {
+		"vscode": "^1.46.0"
+	},
+	"author": {
+		"name": "Rennan Possas"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"icon": "images/logo.png",
+	"activationEvents": [
+		"onCommand:flutter-easy-project.createFeature",
+		"onCommand:flutter-easy-project.createModel",
+		"onCommand:flutter-easy-project.createRepository",
+		"onCommand:flutter-easy-project.createUseCase",
+		"onCommand:flutter-easy-project.createView",
+		"onCommand:flutter-easy-project.createViewModel",
+		"onCommand:flutter-easy-project.createWidget",
+		"onCommand:flutter-easy-project.setupProject"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "flutter-easy-project.createFeature",
+				"title": "Add a Feature",
+				"category": "EasyProject Flutter"
+			},
+			{
+				"command": "flutter-easy-project.createModel",
+				"title": "Add a Model",
+				"category": "EasyProject Flutter"
+			},
+			{
+				"command": "flutter-easy-project.createWidget",
+				"title": "Add a Widget",
+				"category": "EasyProject Flutter"
+			},
+			{
+				"command": "flutter-easy-project.createRepository",
+				"title": "Add a Repository",
+				"category": "EasyProject Flutter"
+			},
+			{
+				"command": "flutter-easy-project.createView",
+				"title": "Add a View",
+				"category": "EasyProject Flutter"
+			},
+			{
+				"command": "flutter-easy-project.createViewModel",
+				"title": "Add a ViewModel",
+				"category": "EasyProject Flutter"
+			},
+			{
+				"command": "flutter-easy-project.createUseCase",
+				"title": "Add a UseCase",
+				"category": "EasyProject Flutter"
+			},
+			{
+				"command": "flutter-easy-project.setupProject",
+				"title": "Project setUp",
+				"category": "EasyProject Flutter"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint src --ext ts",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^7.0.2",
+		"@types/node": "^13.11.0",
+		"@types/vscode": "^1.46.0",
+		"@typescript-eslint/eslint-plugin": "^2.30.0",
+		"@typescript-eslint/parser": "^2.30.0",
+		"eslint": "^6.8.0",
+		"glob": "^7.1.6",
+		"mocha": "^7.1.2",
+		"shelljs": "^0.8.4",
+		"typescript": "^3.9.5",
+		"vscode-test": "^1.3.0"
+	},
+	"dependencies": {
+		"@types/js-yaml": "^3.12.5",
+		"@types/lodash": "^4.14.160",
+		"@types/shelljs": "^0.8.8",
+		"typescript": "^3.9.5"
+	}
+}
