@@ -1,6 +1,6 @@
 {
 	"name": "flutter-easy-project",
-	"displayName": "Flutter Design Patterns",
+	"displayName": "Flutter Easy Projects",
 	"description": "Flutter extension to make projects creation easier",
 	"version": "1.0.0",
 	"publisher": "rennanpossas",
@@ -10,10 +10,14 @@
 	"author": {
 		"name": "Rennan Possas"
 	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/rennanpossas/flutter-easy-project.git"
+		},
 	"categories": [
 		"Programming Languages"
 	],
-	"icon": "images/logo.png",
+	"icon": "assets/images/logo.png",
 	"activationEvents": [
 		"onCommand:flutter-easy-project.createFeature",
 		"onCommand:flutter-easy-project.createModel",
