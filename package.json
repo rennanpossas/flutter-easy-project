@@ -2,7 +2,7 @@
 	"name": "flutter-easy-project",
 	"displayName": "Flutter Easy Projects",
 	"description": "Flutter extension to make projects creation easier",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"publisher": "rennanpossas",
 	"engines": {
 		"vscode": "^1.46.0"
@@ -15,7 +15,7 @@
 		"url": "https://github.com/rennanpossas/flutter-easy-project.git"
 		},
 	"categories": [
-		"Programming Languages"
+		"Programming Languages", "Snippets"
 	],
 	"icon": "assets/images/logo.png",
 	"activationEvents": [
@@ -68,8 +68,14 @@
 			},
 			{
 				"command": "flutter-easy-project.setupProject",
-				"title": "Project setUp",
+				"title": "Project set Up",
 				"category": "EasyProject Flutter"
+			}
+		],
+		"snippets": [
+			{
+			  "language": "dart",
+			  "path": "./snippets/snippets.json"
 			}
 		]
 	},
