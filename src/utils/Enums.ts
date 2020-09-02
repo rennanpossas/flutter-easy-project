@@ -13,6 +13,12 @@ export enum ComponentType{
     FEATURE = "Feature"
 }
 
+export enum PubspecAttribute{
+    DEPENDENCIES = "dependencies",
+    DEV_DEPENDENCIES = "dev_dependencies",
+    SCRIPTS = "scripts"
+}
+
 export enum MvvmMobxModularFolders{
     UI = "ui",
     USECASE = "usecase",

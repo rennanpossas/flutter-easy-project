@@ -1,6 +1,7 @@
 import * as yaml from 'js-yaml';
 import { VsCodeActions } from './VsCodeActions';
 import { IOHelper } from './IOHelper';
+import { PubspecAttribute } from './Enums'
 import * as _ from 'lodash';
 
 export class YamlHelper {
@@ -51,25 +52,16 @@ export class YamlHelper {
         this.overwritePubspecFile(updatedYaml);
     }
 
-    public static addDevDependencyToPubspec(module: string, version?: string) {
+    public static addValueToPubspec(attribute:PubspecAttribute, module: string, value?: string){
         let json = this.getPubspecJsonFile();
         if (json === undefined) { return; }
+
         let object = JSON.parse(json);
-        object['dev_dependencies'][module] = `^${version}`;
-        let modifiedString = JSON.stringify(object);
-        let updatedYaml = this.toYAML(modifiedString);
-        if (updatedYaml === undefined) {
-            return;
+        if(object[attribute] === undefined){
+            object[attribute] = {};
         }
-        this.overwritePubspecFile(updatedYaml);
-    }
 
-    public static addDependencyToPubspec(module: string, version?: string) {
-        let json = this.getPubspecJsonFile();
-        if (json === undefined) { return; }
-
-        let object = JSON.parse(json);
-        object['dependencies'][module] = `^${version}`;
+        object[attribute][module] = `${value}`;
 
         let modifiedString = JSON.stringify(object);
         console.debug(`Pubspec alterado: ${modifiedString}`);

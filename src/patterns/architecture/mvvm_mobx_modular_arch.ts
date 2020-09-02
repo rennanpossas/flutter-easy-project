@@ -1,4 +1,5 @@
 import * as path from 'path';
+import * as shell from 'shelljs';
 import * as _ from "lodash";
 import {YamlHelper} from "../../utils/YamlHelper"
 import {IOHelper} from "../../utils/IOHelper"
@@ -9,7 +10,7 @@ import {InterfaceRepository} from "../../templates/architecture_components/mvvm_
 import { View } from '../../templates/architecture_components/mvvm_mobx_modular/view';
 import { Widget } from '../../templates/architecture_components/mvvm_mobx_modular/widget';
 import { UseCase } from '../../templates/architecture_components/mvvm_mobx_modular/useCase';
-import { MvvmMobxModularFolders, ArchitectureType } from '../../utils/Enums';
+import { MvvmMobxModularFolders, ArchitectureType, PubspecAttribute } from '../../utils/Enums';
 import { Main } from '../../templates/architecture_components/mvvm_mobx_modular/main';
 import { Module } from '../../templates/architecture_components/mvvm_mobx_modular/module';
 import { Splash } from '../../templates/architecture_components/mvvm_mobx_modular/splash';
@@ -26,13 +27,15 @@ export class MvvmMobxModularArchitecture {
     }
 
     private initDependencies(){
-        YamlHelper.addDependencyToPubspec("flutter_mobx", "1.1.0");
-        YamlHelper.addDependencyToPubspec("mobx", "1.2.1");
-        YamlHelper.addDependencyToPubspec("flutter_modular", "1.2.4");
+        YamlHelper.addValueToPubspec(PubspecAttribute.DEPENDENCIES,"flutter_mobx", "^1.1.0");
+        YamlHelper.addValueToPubspec(PubspecAttribute.DEPENDENCIES,"mobx", "^1.2.1");
+        YamlHelper.addValueToPubspec(PubspecAttribute.DEPENDENCIES,"flutter_modular", "^1.2.4");
 
-        YamlHelper.addDevDependencyToPubspec("mockito", "4.1.1");
-        YamlHelper.addDevDependencyToPubspec("mobx_codegen", "1.1.0");
-        YamlHelper.addDevDependencyToPubspec("build_runner", "1.10.0");
+        YamlHelper.addValueToPubspec(PubspecAttribute.DEV_DEPENDENCIES,"mockito", "^4.1.1");
+        YamlHelper.addValueToPubspec(PubspecAttribute.DEV_DEPENDENCIES,"mobx_codegen", "^1.1.0");
+        YamlHelper.addValueToPubspec(PubspecAttribute.DEV_DEPENDENCIES,"build_runner", "^1.10.0");
+
+        YamlHelper.addValueToPubspec(PubspecAttribute.SCRIPTS,"mobx", "flutter pub run build_runner watch --delete-conflicting-outputs");
 
         YamlHelper.setArchitectureType(ArchitectureType.MVVM_MobX_Modular);
     }
