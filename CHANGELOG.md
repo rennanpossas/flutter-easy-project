@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.0.2
+
+- Adjusts
+    - Code refactor
+    - Adjusting statel snippet
+
 ## 1.0.1
 
 - Adjusts

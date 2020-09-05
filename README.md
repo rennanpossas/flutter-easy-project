@@ -19,7 +19,11 @@ How to use this step-by-step:
 
 5 - To add other components, just see the EasyProject's command group inside VS Code command palette
 
-6 - Enjoy
+6 - Build your application using the following command:
+
+> flutter pub run build_runner watch --delete-conflicting-outputs
+
+7 - Enjoy
 
 Commands:
 

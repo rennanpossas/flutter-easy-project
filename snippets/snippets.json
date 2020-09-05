@@ -1,31 +1,15 @@
 {    
     "Create Stateless Widget": { 
        
-      "prefix": "lwdg", 
+      "prefix": "statel", 
        
       "body": [
-         "class $1 extends StatelessWidget {",
+        "class $1 extends StatelessWidget {",
+          "\tconst $1({ Key key }) : super(key: key);",
+          "",
           "\t@override",
           "\tWidget build(BuildContext context) {",
-            "\t\t// Material is a conceptual piece of paper on which the UI appears.",
-            "\t\treturn Material(",
-              "\t\t\t// Column is a vertical, linear layout.",
-              "\t\t\tchild: Column(",
-                "\t\t\t\tchildren: <Widget>[",
-                  "\t\t\t\t\tMyAppBar(", 
-                    "\t\t\t\t\t\ttitle: Text(",
-                      "\t\t\t\t\t\t\t'Example title',",
-                      "\t\t\t\t\t\t\tstyle: Theme.of(context).primaryTextTheme.headline6,",
-                    "\t\t\t\t\t\t),",
-                  "\t\t\t\t\t),",
-                  "\t\t\t\t\tExpanded(",
-                    "\t\t\t\t\t\tchild: Center(",
-                      "\t\t\t\t\t\t\tchild: Text('Hello, world!'),",
-                    "\t\t\t\t\t\t),",
-                  "\t\t\t\t\t),",
-                "\t\t\t\t],",
-              "\t\t\t),",
-            "\t\t);",
+            "\t\treturn Container(color: const Color(0xFF2DBD3A));",
           "\t}",
         "}"
       ],
