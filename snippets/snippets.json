@@ -14,5 +14,27 @@
         "}"
       ],
       "description": "Stateless Widget Snippet"
+    },
+
+    "Create Stateful Widget": { 
+       
+      "prefix": "statef", 
+       
+      "body": [
+        "class $1 extends StatefulWidget {",
+        "\tconst $1({ Key key }) : super(key: key);",
+          "",
+          "\t@override",
+          "\t_$1State createState() => _$1State();",
+          "}",
+        "",
+        "class _$1State extends State<$1> {",
+        "\t@override",
+        "\tWidget build(BuildContext context) {",
+        "\t\treturn Container(color: const Color(0xFFFFE306));",
+        "\t}",
+        "}"
+      ],
+      "description": "Stateful Widget Snippet"
     }
 }

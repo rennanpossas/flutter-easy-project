@@ -1,5 +1,10 @@
 # Change Log
 
+## 1.0.3
+
+- Adjusts
+    - New code snippets
+
 ## 1.0.2
 
 - Adjusts

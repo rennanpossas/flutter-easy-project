@@ -25,6 +25,16 @@ How to use this step-by-step:
 
 7 - Enjoy
 
+Snippets:
+
+Now you can use snippet codes to speed up your development.
+
+> statel
+    - Create a basic Stateless Widget
+
+> statef
+    - Create a basic Stateful Widget
+
 Commands:
 
 > Project set Up <br>
@@ -37,7 +47,7 @@ Commands:
 
 Comming soon:
 
-    - Code snippets to increase development speed
+    - More code snippets to increase development speed
     - New design patterns
 
 You can clone this extension source code at: https://github.com/rennanpossas/flutter-easy-project
