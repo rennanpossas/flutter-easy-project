@@ -27,13 +27,49 @@ How to use this step-by-step:
 
 Snippets:
 
-Now you can use snippet codes to speed up your development.
+Now you can use code snippets to speed up your development.
 
-> statel
-    - Create a basic Stateless Widget
+| Shortcut   | Expanded                 |
+| ---------- | ------------------------ |
+| `animatedBldr`    | Animated Builder         |
+| `cclipper`       | Custom Clipper           |
+| `cpainter`       | Custom Painter           |
+| `cscrollv`      | Custom ScrollView        |
+| `cupeapp`    | Cupertino Package |
+| `debugP`   | Debug Print  |
+| `didcd`      | didChangeDependencies    |
+| `diduW`      | didUpdateWidget          |
+| `dis`      | Dispose                  |
+| `f-test`    | Test |
+| `futureBldr`   | Future Builder           |
+| `inheritedW`   | Inherited Widget          |
+| `istate`     | InitState                |
+| `importM`    | Material Package |
+| `importC`    | Cupertino Package |
+| `importFT`    | flutter_test Package |
+| `layoutBldr`  | Layout Builder           |
+| `lvb`      | ListView.Builder         |
+| `lvs`    | ListView.Separated |
+| `mateapp`    | Material App |
+| `mbuild`      | Build Method            |
+| `mounted`   | Mounted  |
+| `nosm`   | No Such Method           |
+| `orientationBldr`  | Orientation Builder      |
+| `reassemble`     | Reassemble               |
+| `singleChildSV`     | Single Child Scroll View |
+| `snk`   | Sink  |
+| `statel`    | Stateless Widget         |
+| `statef`    | Stateful Widget          |
+| `statefulBldr` | Stateful Builder         |
+| `streamBldr`      | Stream Builder           |
+| `strm`   | Stream  |
+| `subj`   | Subject  |
+| `toStr`   | To String  |
+| `tweenAnimationBuilder`    | Tween Animation Builder |
+| `valueListenableBuilder`    | Value Listenable Builder |
+| `widgetTest`    | Test Widgets |
 
-> statef
-    - Create a basic Stateful Widget
+<br>
 
 Commands:
 
