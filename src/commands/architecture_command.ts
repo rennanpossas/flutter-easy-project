@@ -1,5 +1,6 @@
-import { VsCodeActions } from '../utils/VsCodeActions'
-import { MvvmMobxModularArchitecture } from '../patterns/architecture/mvvm_mobx_modular_arch'
+import { VsCodeActions } from '../utils/VsCodeActions';
+import { MvvmMobxModularArchitecture } from '../patterns/architecture/mvvm_mobx_modular_arch';
+import { MvcBLoCArchitecture } from '../patterns/architecture/mvc_bloc';
 import { IOHelper } from '../utils/IOHelper';
 import { ArchitectureType, ComponentType } from '../utils/Enums';
 import { window, ProgressLocation } from 'vscode';
@@ -17,6 +18,8 @@ export class ArchitectureCommand{
         switch(type){
             case ArchitectureType.MVVM_MobX_Modular:
                 return new MvvmMobxModularArchitecture(rootPath).init();
+            case ArchitectureType.MVC_BLoC:
+                return new MvcBLoCArchitecture(rootPath).init();
             default:
                 VsCodeActions.showInformationMessage("Sorry, this template wasn't implemented :)")
         }
