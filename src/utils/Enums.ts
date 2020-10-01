@@ -1,6 +1,6 @@
 export enum ArchitectureType{
     MVVM_MobX_Modular = "mvvm_mobx_modular",
-    MVC_MobX = "mvc_mobx"
+    MVC_BLoC = "mvc_bloc"
 }
 
 export enum ComponentType{
