@@ -63,10 +63,6 @@ export class MvvmMobxModularArchitecture {
         IOHelper.createFile(corePath, View.getFormattedFileName('app'), new View('app').genericCode);
         IOHelper.createFile(corePath, Widget.getFormattedFileName('app'), new Widget('app').code);
         IOHelper.createFile(corePath, Module.getFormattedFileName('app'), new Module('app').genericCode);
-        IOHelper.createFile(corePath, Module.getFormattedFileName('app'), new Module('app').genericCode);
-        IOHelper.createFile(corePath, Module.getFormattedFileName('app'), new Module('app').genericCode);
-        IOHelper.createFile(corePath, Module.getFormattedFileName('app'), new Module('app').genericCode);
-        IOHelper.createFile(corePath, Module.getFormattedFileName('app'), new Module('app').genericCode);
 
         //splash
         IOHelper.createFile(splashPath, Splash.getFormattedFileName('splash'), new Splash('splash').code);

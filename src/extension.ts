@@ -80,9 +80,8 @@ export function activate(context: vscode.ExtensionContext) {
 		let items : CustomQuickPickItem[] = [
             {label: 'MVVM + C.A. + MobX + Flutter Modular', description: 'Application structure: MVVM, MobX and Modular', id:ArchitectureType.MVVM_MobX_Modular},
             {label: 'MVC + BLoC', description: 'Application structure: MVC and BLoC', id:ArchitectureType.MVC_BLoC}
-            
         ];
-        VsCodeActions.showPickItems(items, "Selecione o setup de projeto desejado:").then(selection => {
+        VsCodeActions.showPickItems(items, "Select architecture type:").then(selection => {
             ArchitectureCommand.setupProject(selection?.id!);
         });
 	});
