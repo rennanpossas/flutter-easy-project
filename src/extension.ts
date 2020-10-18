@@ -17,7 +17,7 @@ export function activate(context: vscode.ExtensionContext) {
 		});
 
 		if(featureName !== undefined){
-			ArchitectureCommand.createComponent({name:featureName, type:ComponentType.FEATURE})
+			ArchitectureCommand.createComponent({name:featureName, type:ComponentType.FEATURE});
 		}
 	});
 
@@ -74,14 +74,13 @@ export function activate(context: vscode.ExtensionContext) {
 		}
 
 		return false;
-	}
+	};
 
 	let setupProject = vscode.commands.registerCommand('flutter-easy-project.setupProject', async () => {
 		let items : CustomQuickPickItem[] = [
             {label: 'MVVM + C.A. + MobX + Flutter Modular', description: 'Application structure: MVVM, MobX and Modular', id:ArchitectureType.MVVM_MobX_Modular},
             {label: 'MVC + BLoC', description: 'Application structure: MVC and BLoC', id:ArchitectureType.MVC_BLoC}
-            
-        ]
+        ];
         VsCodeActions.showPickItems(items, "Select architecture type:").then(selection => {
             ArchitectureCommand.setupProject(selection?.id!);
         });

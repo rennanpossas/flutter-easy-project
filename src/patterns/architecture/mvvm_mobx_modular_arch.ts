@@ -1,12 +1,12 @@
 import * as path from 'path';
 import * as shell from 'shelljs';
 import * as _ from "lodash";
-import {YamlHelper} from "../../utils/YamlHelper"
-import {IOHelper} from "../../utils/IOHelper"
-import {Model} from "../../templates/architecture_components/mvvm_mobx_modular/model"
-import {ViewModel} from "../../templates/architecture_components/mvvm_mobx_modular/viewModel"
-import {Repository} from "../../templates/architecture_components/mvvm_mobx_modular/repository"
-import {InterfaceRepository} from "../../templates/architecture_components/mvvm_mobx_modular/interface_repository"
+import {YamlHelper} from "../../utils/YamlHelper";
+import {IOHelper} from "../../utils/IOHelper";
+import {Model} from "../../templates/architecture_components/mvvm_mobx_modular/model";
+import {ViewModel} from "../../templates/architecture_components/mvvm_mobx_modular/viewModel";
+import {Repository} from "../../templates/architecture_components/mvvm_mobx_modular/repository";
+import {InterfaceRepository} from "../../templates/architecture_components/mvvm_mobx_modular/interface_repository";
 import { View } from '../../templates/architecture_components/mvvm_mobx_modular/view';
 import { Widget } from '../../templates/architecture_components/mvvm_mobx_modular/widget';
 import { UseCase } from '../../templates/architecture_components/mvvm_mobx_modular/useCase';
@@ -72,7 +72,7 @@ export class MvvmMobxModularArchitecture {
     }
 
     public createFeature(featureName:string){
-        let featurePath = IOHelper.getFeaturePath()
+        let featurePath = IOHelper.getFeaturePath();
 
         let customFeaturePath = IOHelper.createFolder(path.join(featurePath, featureName));
 
