@@ -88,7 +88,6 @@ export class MvcBLoCArchitecture {
         //views
         let viewsFeaturePath =  IOHelper.createFolder(path.join(customFeaturePath, MvvmMobxModularFolders.UI));
         IOHelper.createFile(viewsFeaturePath, View.getFormattedFileName(featureName), new View(featureName).code);
-        IOHelper.createFile(viewsFeaturePath, ViewModel.getFormattedFileName(featureName), new ViewModel(featureName).code);
     }
 
     public createModel(modelName:string, featureName:string){
@@ -109,16 +108,14 @@ export class MvcBLoCArchitecture {
     public createViewModel(viewModelName:string, featureName:string){
         let featurePath = IOHelper.createFolder(path.join(IOHelper.getFeaturePath(), featureName));
         let viewModelPath =  IOHelper.createFolder(path.join(featurePath, MvvmMobxModularFolders.UI));
-
-        IOHelper.createFile(viewModelPath, ViewModel.getFormattedFileName(viewModelName), new ViewModel(viewModelName).genericCode);     
+  
     }
 
     public createView(viewName:string, featureName:string){
         let featurePath = IOHelper.createFolder(path.join(IOHelper.getFeaturePath(), featureName));
         let viewPath =  IOHelper.createFolder(path.join(featurePath, MvvmMobxModularFolders.UI));
 
-        IOHelper.createFile(viewPath, View.getFormattedFileName(viewName), new View(viewName).genericCode);
-        IOHelper.createFile(viewPath, ViewModel.getFormattedFileName(viewName), new ViewModel(viewName).genericCode);     
+        IOHelper.createFile(viewPath, View.getFormattedFileName(viewName), new View(viewName).genericCode);;     
     }
 
     public createUseCase(useCaseName:string, featureName:string){
