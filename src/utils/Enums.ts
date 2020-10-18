@@ -34,3 +34,17 @@ export enum MvvmMobxModularFolders{
     COMMON = "common",
     APP = "app"
 }
+
+export enum MvcBlocFolders{
+    USECASE = "usecase",
+    FEATURES = "features",
+    VIEW = "view",
+    MODEL = "model",
+    CONTROLLER = "controller",
+    WIDGET = "widget",
+    DATA = "data",
+    REPOSITORY = "repository",
+    LIBRARIES = "libraries",
+    COMMON = "common",
+    APP = "app"
+}
