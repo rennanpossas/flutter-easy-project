@@ -82,8 +82,8 @@ export function activate(context: vscode.ExtensionContext) {
             {label: 'MVC + BLoC', description: 'Application structure: MVC and BLoC', id:ArchitectureType.MVC_BLoC}
             
         ]
-        VsCodeActions.showPickItems(items, "Selecione o setup de projeto desejado:").then(selection => {
-            ArchitectureCommand.setupProject(selection?.id!)
+        VsCodeActions.showPickItems(items, "Select architecture type:").then(selection => {
+            ArchitectureCommand.setupProject(selection?.id!);
         });
 	});
 
