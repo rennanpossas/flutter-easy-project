@@ -2,7 +2,7 @@
 	"name": "flutter-easy-project",
 	"displayName": "Flutter Easy Projects",
 	"description": "Flutter extension to make projects creation easier",
-	"version": "1.0.4",
+	"version": "1.0.6",
 	"publisher": "rennanpossas",
 	"engines": {
 		"vscode": "^1.46.0"
@@ -106,6 +106,7 @@
 		"@types/js-yaml": "^3.12.5",
 		"@types/lodash": "^4.14.160",
 		"@types/shelljs": "^0.8.8",
+		"lodash": "^4.17.21",
 		"typescript": "^3.9.5"
 	}
 }
