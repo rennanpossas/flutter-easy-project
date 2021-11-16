@@ -46,24 +46,6 @@ export class MvcBLoCArchitecture {
         let commonUseCase = IOHelper.createFolder(path.join(commonLibrariesPath, MvcBlocFolders.USECASE));
 
         let splashPath = IOHelper.createFolder(path.join(viewsPath, "splash"));
-<<<<<<< Updated upstream
-        
-        //app
-        IOHelper.createFile(corePath, View.getFormattedFileName('app'), new View('app').genericCode);
-        IOHelper.createFile(corePath, Widget.getFormattedFileName('app'), new Widget('app').code);
-        IOHelper.createFile(corePath, Module.getFormattedFileName('app'), new Module('app').genericCode);
-        IOHelper.createFile(corePath, Module.getFormattedFileName('app'), new Module('app').genericCode);
-        IOHelper.createFile(corePath, Module.getFormattedFileName('app'), new Module('app').genericCode);
-        IOHelper.createFile(corePath, Module.getFormattedFileName('app'), new Module('app').genericCode);
-        IOHelper.createFile(corePath, Module.getFormattedFileName('app'), new Module('app').genericCode);
-
-        //splash
-        IOHelper.createFile(splashPath, Splash.getFormattedFileName('splash'), new Splash('splash').code);
-
-        //libraries
-        IOHelper.createFile(commonUseCase, InterfaceUseCase.getFormattedFileName('usecase'), new InterfaceUseCase('useCase').code);
-=======
->>>>>>> Stashed changes
     }
 
     public createFeature(featureName:string){
