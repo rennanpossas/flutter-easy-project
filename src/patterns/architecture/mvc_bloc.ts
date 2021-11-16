@@ -46,6 +46,7 @@ export class MvcBLoCArchitecture {
         let commonUseCase = IOHelper.createFolder(path.join(commonLibrariesPath, MvcBlocFolders.USECASE));
 
         let splashPath = IOHelper.createFolder(path.join(viewsPath, "splash"));
+<<<<<<< Updated upstream
         
         //app
         IOHelper.createFile(corePath, View.getFormattedFileName('app'), new View('app').genericCode);
@@ -61,6 +62,8 @@ export class MvcBLoCArchitecture {
 
         //libraries
         IOHelper.createFile(commonUseCase, InterfaceUseCase.getFormattedFileName('usecase'), new InterfaceUseCase('useCase').code);
+=======
+>>>>>>> Stashed changes
     }
 
     public createFeature(featureName:string){
