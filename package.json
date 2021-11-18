@@ -2,7 +2,7 @@
 	"name": "flutter-easy-project",
 	"displayName": "Flutter Easy Projects",
 	"description": "Flutter extension to make projects creation easier",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"publisher": "rennanpossas",
 	"engines": {
 		"vscode": "^1.46.0"

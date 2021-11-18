@@ -14,6 +14,7 @@ export class Widget extends Base {
 import 'package:flutter_modular/flutter_modular.dart';
 
 class ${this.getName}Widget extends StatelessWidget {
+  const ${this.getName}Widget({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

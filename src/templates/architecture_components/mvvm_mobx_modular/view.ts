@@ -17,7 +17,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 
 class ${this.getName}View extends StatefulWidget {
 
-const ${this.getName}View({Key key}) : super(key: key);
+const ${this.getName}View({Key? key}) : super(key: key);
 
 @override
 _${this.getName}ViewState createState() => _${this.getName}ViewState();
