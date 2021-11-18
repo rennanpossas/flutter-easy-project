@@ -17,7 +17,7 @@ import './app.view.dart';
 import './app.viewmodel.dart';
 import './ui/splash/splash.view.dart';
 
-class AppModule extends MainModule {
+class AppModule extends Module {
 static AppView _appView = AppView();
 
 List<Bind> repositories = [];
@@ -37,15 +37,14 @@ List<Bind> app = [
 List<Bind> get binds => splash + app + repositories + usecases;
 
 @override
-List<Router> get routers => [
-        Router(Modular.initialRoute, child: (_, args) => SplashView()),
-        Router('/app', child: (_, args) => _appView),
+List<ModularRoute> get routes => [
+      ChildRoute(Modular.initialRoute, child: (context, args) => SplashView()),
+      ChildRoute('/app', child: (context, args) => _appView),
     ];
 
 @override
 Widget get bootstrap => AppWidget();
 
-static Inject get to => Inject<AppModule>.of();
 }`;
 
     this.code = `import 'package:flutter_modular/flutter_modular.dart';
@@ -72,8 +71,8 @@ List<Bind> ui = [
 List<Bind> get binds => ui + usecases + repositories;
 
 @override
-List<Router> get routers => [
-      Router(Modular.initialRoute, child: (_, args) => ${this.getName}View()),
+List<ModularRoute> get routes => [
+      ChildRoute(Modular.initialRoute, child: (context, args) => ${this.getName}View()),
     ];
 }`;
   }

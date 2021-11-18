@@ -97,14 +97,14 @@ export class YamlHelper {
             console.error(e);
             return undefined;
         }
-        return yaml.safeDump(json, { indent: this.getIndent() });
+        return yaml.dump(json, { indent: this.getIndent() });
     }
 
     private static toJSON(text: string) {
         let json;
         try {
             console.debug(`toJSON: ${text}`);
-            json = yaml.safeLoad(text, { schema: yaml.JSON_SCHEMA });
+            json = yaml.load(text, { schema: yaml.JSON_SCHEMA });
         } catch (e) {
             VsCodeActions.showErrorMessage('Error on yaml parsing.');
             console.error(e);

@@ -27,13 +27,13 @@ export class MvvmMobxModularArchitecture {
     }
 
     private initDependencies(){
-        YamlHelper.addValueToPubspec(PubspecAttribute.DEPENDENCIES,"flutter_mobx", "^1.1.0");
-        YamlHelper.addValueToPubspec(PubspecAttribute.DEPENDENCIES,"mobx", "^1.2.1");
-        YamlHelper.addValueToPubspec(PubspecAttribute.DEPENDENCIES,"flutter_modular", "^1.2.4");
+        YamlHelper.addValueToPubspec(PubspecAttribute.DEPENDENCIES,"flutter_mobx", "^2.0.2");
+        YamlHelper.addValueToPubspec(PubspecAttribute.DEPENDENCIES,"mobx", "^2.0.5");
+        YamlHelper.addValueToPubspec(PubspecAttribute.DEPENDENCIES,"flutter_modular", "^4.2.0");
 
-        YamlHelper.addValueToPubspec(PubspecAttribute.DEV_DEPENDENCIES,"mockito", "^4.1.1");
-        YamlHelper.addValueToPubspec(PubspecAttribute.DEV_DEPENDENCIES,"mobx_codegen", "^1.1.0");
-        YamlHelper.addValueToPubspec(PubspecAttribute.DEV_DEPENDENCIES,"build_runner", "^1.10.0");
+        YamlHelper.addValueToPubspec(PubspecAttribute.DEV_DEPENDENCIES,"mockito", "^5.0.16");
+        YamlHelper.addValueToPubspec(PubspecAttribute.DEV_DEPENDENCIES,"mobx_codegen", "^2.0.4");
+        YamlHelper.addValueToPubspec(PubspecAttribute.DEV_DEPENDENCIES,"build_runner", "^2.1.5");
 
         YamlHelper.addValueToPubspec(PubspecAttribute.SCRIPTS,"mobx", "flutter pub run build_runner watch --delete-conflicting-outputs");
 

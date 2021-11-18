@@ -17,7 +17,7 @@ import 'package:flutter_modular/flutter_modular.dart';
     
 // Modules
     
-void main() => runApp(ModularApp(module: AppModule()));`;
+void main() => runApp(ModularApp(module: AppModule(), child:AppWidget()));`;
 
   }
 }
